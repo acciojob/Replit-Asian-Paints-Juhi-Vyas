@@ -7,6 +7,14 @@ let color = document.getElementById("colour_id")
 changeBtn.addEventListener("click", ()=>{
 	let inputValue = input.value
 	let colorValue = color.value
-	gridItem[inputValue-1].style.backgroundColor = colorValue
+	if (inputValue === "") {
+        gridItem.forEach(box => {
+            box.style.backgroundColor = "rgba(0, 0, 0, 0)";
+        });
+        return;
+    }else{
+		gridItem[inputValue-1].style.backgroundColor = colorValue
+
+	}
 })
 
