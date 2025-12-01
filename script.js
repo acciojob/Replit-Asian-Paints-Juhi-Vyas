@@ -4,19 +4,14 @@ let input = document.getElementById("block_id");
 let color = document.getElementById("colour_id");
 
 changeBtn.addEventListener("click", () => {
-    let inputValue = input.value.trim();  
+    let inputValue = Number(input.value);
+    let colorValue = color.value;
 
-    if (inputValue === "") {
-        gridItem.forEach(box => {
-            box.style.backgroundColor = "rgba(0, 0, 0, 0)";
-        });
-        return;
-    }
+    gridItem.forEach(box => {
+        box.style.backgroundColor = "rgba(0, 0, 0, 0)";
+    });
 
-    let index = Number(inputValue) - 1;
-    let colorValue = color.value; 
-
-    if (index >= 0 && index < gridItem.length) {
-        gridItem[index].style.backgroundColor = colorValue;
+    if (inputValue >= 1 && inputValue <= gridItem.length) {
+        gridItem[inputValue - 1].style.backgroundColor = colorValue;
     }
 });
