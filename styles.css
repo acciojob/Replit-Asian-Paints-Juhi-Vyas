@@ -5,4 +5,7 @@
 	grid-template-rows: repeat(3,1fr);
 	grid-gap: 5px;
 }
-4
+
+.grid-item{
+	background-color: rgb(255, 0, 0)
+}
