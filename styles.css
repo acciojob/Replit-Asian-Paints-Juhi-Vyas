@@ -1,4 +1,4 @@
-#grid-container{
+.grid-container{
 	display: grid;
 	flex-wrap: wrap;
 	grid-template-columns: repeat(3,1fr);
