@@ -1,4 +1,4 @@
-let gridItem = document.querySelectorAll("#grid-item")
+let gridItem = document.querySelectorAll(".grid-item")
 let changeBtn = document.getElementById("change_button")
 let input = document.getElementById("block_id")
 let color = document.getElementById("colour_id")

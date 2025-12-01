@@ -5,6 +5,4 @@
 	grid-template-rows: repeat(3,1fr);
 	grid-gap: 5px;
 }
-#grid-container div{
-	border: 2px solid gray;
-}
+4
