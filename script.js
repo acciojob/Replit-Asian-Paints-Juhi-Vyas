@@ -4,9 +4,8 @@ let input = document.getElementById("block_id");
 let color = document.getElementById("colour_id");
 
 changeBtn.addEventListener("click", () => {
-    let inputValue = input.value.trim();  // read raw value first
+    let inputValue = input.value.trim();  
 
-    // 🔹 If empty → make ALL transparent
     if (inputValue === "") {
         gridItem.forEach(box => {
             box.style.backgroundColor = "rgba(0, 0, 0, 0)";
@@ -14,11 +13,9 @@ changeBtn.addEventListener("click", () => {
         return;
     }
 
-    // 🔹 Convert to number after empty check
     let index = Number(inputValue) - 1;
-    let colorValue = color.value;   // hex from Cypress
+    let colorValue = color.value; 
 
-    // 🔹 Apply color to correct block
     if (index >= 0 && index < gridItem.length) {
         gridItem[index].style.backgroundColor = colorValue;
     }
